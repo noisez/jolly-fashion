@@ -1,8 +1,96 @@
-#masthead {
+#masthead, #colophon {
 	background-color: white;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+body.woocommerce #primary {
+    float: none;
+    width: 100%;
+}
+
+
+/* Header */
+
+/* Header Nav */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    max-width: 430px;
+    margin: auto;
+}
+
+.menu-item {
+    font-weight: 700;
+}
+
+.nav__personal {
+    display: flex;
+    justify-content: space-between;
+    max-width: 230px;
+    margin-left: auto;
+}
+
+.personal__account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90px;
+    width: 100%;
+}
+.account__img {
+    height: 8px;
+}
+
+.account__line {
+    height: 20px;
+    width: 1px;
+    background-color: black;
+}
+
+.personal__img {
+    height: 20px;
+}
+
+/* Footer */
+.footer__socials {
+    max-width: 205px;
+    margin-left: auto;
+}
+
+.footer__menu {
+    margin-left: 35%;
+}
+
+/**/
+
+/**/
+
+/**/
+
+/**/
+
+/**/
+
+/**/
+
+/**/
+
+/* Woocommerce */
+.woocommerce-pagination {
+    border: none;
+    clear: none;
+    padding: 0;
+}
+
+.storefront-breadcrumb {
+    margin: 0;
 }

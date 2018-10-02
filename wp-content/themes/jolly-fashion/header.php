@@ -25,25 +25,52 @@
 	<?php do_action( 'storefront_before_header' ); ?>
 
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
-
-<!--		--><?php
-//		/**
-//		 * Functions hooked into storefront_header action
-//		 *
-//		 * @hooked storefront_header_container                 - 0
-//		 * @hooked storefront_skip_links                       - 5
-//		 * @hooked storefront_social_icons                     - 10
-//		 * @hooked storefront_site_branding                    - 20
-//		 * @hooked storefront_secondary_navigation             - 30
-//		 * @hooked storefront_product_search                   - 40
-//		 * @hooked storefront_header_container_close           - 41
-//		 * @hooked storefront_primary_navigation_wrapper       - 42
-//		 * @hooked storefront_primary_navigation               - 50
-//		 * @hooked storefront_header_cart                      - 60
-//		 * @hooked storefront_primary_navigation_wrapper_close - 68
-//		 */
-//		do_action( 'storefront_header' ); ?>
-
+        <nav class="nav">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <a href="<?php echo get_home_url(); ?>">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.png" alt="" class="nav__logo">
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <?php
+                        wp_nav_menu( array(
+                            'menu_class'=>'menu',
+                            'theme_location'=>'top',
+                            'after'=>''
+                        ) );
+                        ?>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="nav__personal">
+                            <li class="personal__account">
+                                <span class="account__name">Войти</span>
+                                <a href="#" class="personal__link">
+                                    <img class="account__img" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/arrow-down.svg" alt="">
+                                </a>
+                                <div class="account__line"></div>
+                            </li>
+                            <li class="personal__search">
+                                <a href="#" class="personal__link">
+                                    <img class="personal__img" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/magnifying-glass.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="personal__like">
+                                <a href="#" class="personal__link">
+                                    <img class="personal__img" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/heart.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="personal__cart">
+                                <a href="#" class="personal__link">
+                                    <img class="personal__img" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/shopping-bag.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
 	</header><!-- #masthead -->
 
 	<?php
@@ -56,7 +83,7 @@
 	do_action( 'storefront_before_content' ); ?>
 
 	<div id="content" class="site-content" tabindex="-1">
-		<div class="col-full">
+		<div class="container">
 
 		<?php
 		do_action( 'storefront_content_top' );
