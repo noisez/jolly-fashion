@@ -1,1 +1,3 @@
-storefront/inc/woocommerce/class-storefront-woocommerce.php = class="col-full" --> class="container"
+\wp-includes\js\jquery\ == jquery.js --> jquery_old.js  change for new jquery
+storefront\inc\woocommerce\class-storefront-woocommerce.php = class="col-full" --> class="container"
+\wp-content\plugins\woocommerce\includes = 'posts_per_page' => 2 --> 'posts_per_page' => 4 ; 'columns' => 2 --> 'columns' => 4

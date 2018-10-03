@@ -44,3 +44,36 @@ function remove_storefront_sidebar() {
 add_filter('loop_shop_columns',function($col){
     return 4 ;
 });
+
+/* Количество колонок в похожих товарах */
+function woocommerce_output_related_products() {
+    woocommerce_related_products(4,4); // Показать 4 товара а 4 колонки
+}
+
+/* Обрезка изображений */
+add_filter('woocommerce_get_image_size_thumbnail','add_thumbnail_size',1,10);
+function add_thumbnail_size($size){
+
+    $size['width'] = 235;
+    $size['height'] = 300;
+    $size['crop']   = 0; //0 - не обрезаем, 1 - обрезка
+    return $size;
+}
+
+add_filter('woocommerce_get_image_size_single','add_single_size',1,10);
+function add_single_size($size){
+
+    $size['width'] = 455;
+    $size['height'] = 581;
+    $size['crop']   = 0;
+    return $size;
+}
+
+//add_filter('woocommerce_get_image_size_gallery_thumbnail','add_gallery_thumbnail_size',1,10);
+//function add_gallery_thumbnail_size($size){
+//
+//    $size['width'] = 100;
+//    $size['height'] = 100;
+//    $size['crop']   = 1;
+//    return $size;
+//}
