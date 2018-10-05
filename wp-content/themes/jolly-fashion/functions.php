@@ -77,3 +77,11 @@ function add_single_size($size){
 //    $size['crop']   = 1;
 //    return $size;
 //}
+
+/* Меняем надпись Распродажа на Скидка */
+add_filter('woocommerce_sale_flash', 'my_custom_sale_flash', 10, 3);
+function my_custom_sale_flash($text, $post, $_product) {
+    return '
+<span class="onsale"> Скидка </span>
+';
+}

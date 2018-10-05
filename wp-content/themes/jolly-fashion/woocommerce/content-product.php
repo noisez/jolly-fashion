@@ -24,7 +24,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<li class="col-xl-3 col-lg-4 col-sm-6 product-item">
+<li class="col-xl-3 col-lg-4 col-sm-6 product__item">
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
@@ -32,7 +32,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_product_link_open - 10
 	 */
 	do_action( 'woocommerce_before_shop_loop_item' );
-
 	/**
 	 * Hook: woocommerce_before_shop_loop_item_title.
 	 *
@@ -62,6 +61,12 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_product_link_close - 5
 	 * @hooked woocommerce_template_loop_add_to_cart - 10
 	 */
-	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
+    <div class="attr__buy">
+        <?php
+        do_action( 'woocommerce_after_shop_loop_item' );
+        global $product;
+        echo $product->list_attributes();
+        ?>
+    </div>
 </li>
