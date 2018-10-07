@@ -128,9 +128,13 @@ a:active, a:hover {
     opacity: 0.7;
 }
 
-
 .woocommerce-loop-product__title {
     font-size: 18px;
+}
+
+.woocommerce-LoopProduct-link, .size-woocommerce_thumbnail {
+    width: 100%;
+    max-width: 251px;
 }
 
 /*.product__attributes {*/
@@ -146,15 +150,13 @@ a:active, a:hover {
     position: absolute;
     top: 100%;
     z-index: 5;
-    width: 235px;
+    width: 251px;
     background-color: white;
-    border-bottom: none;
 }
 
 .product__item:hover .attr__buy, .product__item:hover a  {
     height: auto;
     outline: 1px solid #CC4798;
-    border-bottom: none;
 }
 
 .product__item {
@@ -178,8 +180,6 @@ a:active, a:hover {
 
 /* Woocommerce */
 .woocommerce-pagination {
-    border: none;
-    clear: none;
     padding: 0;
 }
 

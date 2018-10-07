@@ -54,8 +54,8 @@ function woocommerce_output_related_products() {
 add_filter('woocommerce_get_image_size_thumbnail','add_thumbnail_size',1,10);
 function add_thumbnail_size($size){
 
-    $size['width'] = 235;
-    $size['height'] = 300;
+    $size['width'] = 320;
+    $size['height'] = 410;
     $size['crop']   = 0; //0 - не обрезаем, 1 - обрезка
     return $size;
 }
