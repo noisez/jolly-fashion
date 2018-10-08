@@ -148,6 +148,8 @@ if ( ! function_exists( 'storefront_sorting_wrapper' ) ) {
 	 * @return  void
 	 */
 	function storefront_sorting_wrapper() {
+        echo '<div class="row">';
+        echo '<div class="col-md-2">';
 		echo '<div class="storefront-sorting">';
 	}
 }
@@ -160,6 +162,25 @@ if ( ! function_exists( 'storefront_sorting_wrapper_close' ) ) {
 	 * @return  void
 	 */
 	function storefront_sorting_wrapper_close() {
+        echo '</div>';
+        echo '</div>';
+
+        echo '<div class="col-md-2">';
+        echo do_shortcode( '[widget id="woocommerce_product_categories-2"]' );
+        echo '</div>';
+
+        echo '<div class="col-md-2">';
+        echo do_shortcode( '[widget id="woocommerce_layered_nav-3"]' );
+        echo '</div>';
+
+        echo '<div class="col-md-2">';
+        echo do_shortcode( '[widget id="woocommerce_layered_nav-2"]' );
+        echo '</div>';
+
+        echo '<div class="col-md-4"><div class="price-filter">Ценовой диапазон</div>';
+        echo do_shortcode( '[widget id="woocommerce_price_filter-2"]' );
+        echo '</div>';
+
 		echo '</div>';
 	}
 }

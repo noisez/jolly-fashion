@@ -191,3 +191,62 @@ a:active, a:hover {
     margin: 0;
     float: none;
 }
+
+
+
+/* Some fixes */
+.form-row {
+    display: block;
+}
+
+.col-1, .col-2 {
+    max-width: 100%;
+}
+
+
+/* Filters */
+.woocommerce-result-count, .select2-selection {
+    display: none!important;
+
+}
+
+span.select2, .woocommerce-pagination {
+    display: none;
+}
+
+select.select2-hidden-accessible {
+    width: 100%!important;
+    height: auto!important;
+    position: static!important;
+}
+
+.orderby, .dropdown_product_cat, select.select2-hidden-accessible, .price-filter {
+    border: none;
+    border-bottom: 1px solid black!important;
+}
+
+.storefront-sorting select {
+    width: 100%;
+}
+
+.widget_price_filter {
+    transition: all .4s ease;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 90%;
+    z-index: 1;
+    background-color: white;
+}
+
+.widget_open {
+    height: 79px;
+}
+
+.widget_price_filter .price_slider_wrapper .ui-widget-content {
+    margin-top: 10px;
+}
+
+.button {
+    background-color: #CC4798;
+}
