@@ -1,5 +1,11 @@
 $( document ).ready(function() {
 
+    $('.main-blog__slider_box').slick({
+        prevArrow: $('.slblog_prev'),
+        nextArrow: $('.slblog_next')
+    });
+
+
     $('.banners__slider1').slick({
         prevArrow: $('.sl1_prev'),
         nextArrow: $('.sl1_next')

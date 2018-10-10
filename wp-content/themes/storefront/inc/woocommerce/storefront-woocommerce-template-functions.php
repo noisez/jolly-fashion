@@ -148,7 +148,7 @@ if ( ! function_exists( 'storefront_sorting_wrapper' ) ) {
 	 * @return  void
 	 */
 	function storefront_sorting_wrapper() {
-        echo '<div class="row">';
+        echo '<div class="filters row">';
         echo '<div class="col-md-2">';
 		echo '<div class="storefront-sorting">';
 	}

@@ -18,6 +18,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
             <?php
             require("top_banners.php");
+            require("main-blog.php");
             ?>
 			<?php
 			/**
