@@ -1,5 +1,21 @@
 $( document ).ready(function() {
 
+    var user = $('.account__name');
+    if(user.html() != '') {
+
+    }
+    else {
+        user.html("Вход");
+    }
+    var count = $('.personal__cart_count');
+    if(count.html() == 0 ) {
+        count.hide();
+    }
+    else {
+        count.show();
+    }
+
+
     $('.main-blog__slider_box').slick({
         prevArrow: $('.slblog_prev'),
         nextArrow: $('.slblog_next')
@@ -22,5 +38,9 @@ $( document ).ready(function() {
 
     $('.price-filter').click(function () {
         $('.widget_price_filter').toggleClass('widget_open');
+    });
+
+    $('.personal__search').click(function () {
+        $('.nav__search').toggleClass('nav__search_open');
     });
 });

@@ -45,26 +45,30 @@
                     <div class="col-md-3">
                         <ul class="nav__personal">
                             <li class="personal__account">
-                                <span class="account__name">Войти</span>
-                                <a href="#" class="personal__link">
+                                <span class="account__name"><?php echo wp_get_current_user()->user_login; ?></span>
+                                <a href="/my-account" class="personal__link">
                                     <img class="account__img" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/arrow-down.svg" alt="">
                                 </a>
                                 <div class="account__line"></div>
                             </li>
                             <li class="personal__search">
-                                <a href="#" class="personal__link">
                                     <img class="personal__img" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/magnifying-glass.svg" alt="">
-                                </a>
                             </li>
                             <li class="personal__like">
-                                <a href="#" class="personal__link">
+                                <a href="/favorites" class="personal__link">
                                     <img class="personal__img" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/heart.svg" alt="">
                                 </a>
                             </li>
                             <li class="personal__cart">
-                                <a href="#" class="personal__link">
+                                <a href="/cart" class="personal__link">
                                     <img class="personal__img" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/shopping-bag.svg" alt="">
+                                    <p class="personal__cart_count"><?php echo WC()->cart->get_cart_contents_count(); ?></p>
                                 </a>
+                            </li>
+                            <li>
+                                <div class="nav__search">
+                                    <?php echo do_shortcode( '[aws_search_form]' ); ?>
+                                </div>
                             </li>
                         </ul>
                     </div>

@@ -18,7 +18,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
             <?php
             require("top_banners.php");
-            require("main-blog.php");
             ?>
 			<?php
 			/**
@@ -33,7 +32,9 @@ get_header(); ?>
 			 * @hooked storefront_best_selling_products - 70
 			 */
 			do_action( 'homepage' ); ?>
-
+            <?php
+            require("main-blog.php");
+            ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 <?php
