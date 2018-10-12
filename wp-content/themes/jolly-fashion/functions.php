@@ -14,11 +14,14 @@ function woocommerce_support() {
 function wptuts_scripts_with_jquery()
 {
     // Register the script like this for a theme:
-    wp_register_script( 'custom-script', get_theme_file_uri() . '/assets/js/script.js' );
+    wp_register_script( 'bootstrap-script', get_theme_file_uri() . '/assets/js/bootstrap.min.js' );
     wp_register_script( 'slick-script', get_theme_file_uri() . '/assets/js/slick.min.js' );
+    wp_register_script( 'custom-script', get_theme_file_uri() . '/assets/js/script.js' );
     // For either a plugin or a theme, you can then enqueue the script:
-    wp_enqueue_script( 'custom-script' );
+    wp_enqueue_script( 'bootstrap-script' );
     wp_enqueue_script( 'slick-script' );
+    wp_enqueue_script( 'custom-script' );
+
 }
 add_action( 'wp_enqueue_scripts', 'wptuts_scripts_with_jquery' );
 
@@ -87,3 +90,33 @@ function my_custom_sale_flash($text, $post, $_product) {
 <span class="onsale"> Скидка </span>
 ';
 }
+
+// Добавьте код ниже в файл functions.php вашей темы для добавления поля подтверждения пароля в форме регистрации на странице Мой профиль.
+add_filter('woocommerce_registration_errors', 'registration_errors_validation', 10,3);
+function registration_errors_validation($reg_errors, $sanitized_user_login, $user_email) {
+    global $woocommerce;
+    extract( $_POST );
+
+    if ( strcmp( $password, $password2 ) !== 0 ) {
+        return new WP_Error( 'registration-error', __( 'Пароли не совпадают.', 'woocommerce' ) );
+    }
+    return $reg_errors;
+}
+
+add_action( 'woocommerce_register_form', 'wc_register_form_password_repeat' );
+function wc_register_form_password_repeat() {
+    ?>
+    <p class="form-row form-row-wide">
+        <label for="reg_password2"><?php _e( 'Повторите Ваш пароль', 'woocommerce' ); ?> <span class="required">*</span></label>
+        <input type="password" class="input-text" name="password2" id="reg_password2" value="<?php if ( ! empty( $_POST['password2'] ) ) echo esc_attr( $_POST['password2'] ); ?>" />
+    </p>
+    <?php
+}
+
+/*allow weak passwords*/
+function wc_ninja_remove_password_strength() {
+    if ( wp_script_is( 'wc-password-strength-meter', 'enqueued' ) ) {
+        wp_dequeue_script( 'wc-password-strength-meter' );
+    }
+}
+add_action( 'wp_print_scripts', 'wc_ninja_remove_password_strength', 100 );

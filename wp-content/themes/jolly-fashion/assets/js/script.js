@@ -2,16 +2,19 @@ $( document ).ready(function() {
 
     var user = $('.account__name');
     if(user.html() != '') {
-
+        $('.personal__account > a').attr('data-toggle', '');
     }
     else {
+        $('.personal__account > a').attr('data-toggle', 'modal');
         user.html("Вход");
     }
     var count = $('.personal__cart_count');
     if(count.html() == 0 ) {
+        $('.icons__box:nth-child(2) > a').attr('data-toggle', '');
         count.hide();
     }
     else {
+        $('.icons__box:nth-child(2) > a').attr('data-toggle', 'modal');
         count.show();
     }
 

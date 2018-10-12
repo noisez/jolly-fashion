@@ -52,11 +52,17 @@ a:active, a:hover {
 
 .personal__account {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     max-width: 90px;
     width: 100%;
 }
+
+a[data-target='#modal_auth'] {
+    display: flex;
+    align-items: center;
+}
+
 .account__img {
     height: 8px;
 }
@@ -338,7 +344,7 @@ input.main-blog__subscribe_input {
     box-shadow: none;
     border-bottom: 1px solid black;
     max-width: 165px;
-    padding: 0;
+
 }
 
 input.main-blog__subscribe_input:focus {
@@ -375,7 +381,58 @@ table.cart .product-thumbnail img {
     height: 40px;
 }
 
-/**/
+/* Modal auth */
+.modal-dialog {
+    width: 360px;
+}
+.modal-content {
+    padding: 30px;
+}
+
+.modal-title {
+    margin: auto;
+}
+
+.modal__help {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-modal {
+    width: 100%;
+    background-color: transparent;
+    color: #CC4798;
+    border: 1px solid #CC4798;
+}
+
+.btn-modal-bottom {
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.btn-modal-bottom:hover {
+    background-color: transparent;
+    color: #CC4798;
+}
+
+.woocommerce-form__label-for-checkbox span, .woocommerce-LostPassword {
+    font-size: 12px;
+}
+
+.woocommerce-form__label-for-checkbox .woocommerce-form__input-checkbox, label.inline {
+    margin: 0;
+}
+
+.modal-dialog .woocommerce-Input--text {
+    width: 100%;
+    background-color: transparent;
+    padding: 5px;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid black;
+}
 
 /**/
 
