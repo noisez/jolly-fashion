@@ -38,9 +38,19 @@ In the free WooCommerce attribute variation plugin, besides creating size, brand
   [Live Demo](http://bit.ly/labbel-swatch-demo-free-readme) | [Documentation](http://bit.ly/label-swatch-free-readme-doc) | [Video Tutorial](http://bit.ly/label-swatch-free-read-youtube) 
 <hr />
 * Convert Globally Created Attibute Variations Into Color, Image, and Label Swatches
-  [Video Tutorial](http://bit.ly/label-swatch-free-read-youtube)
+  [Video Tutorial & Preview](http://bit.ly/label-swatch-free-read-youtube)
 <hr />
-* Option to Select ROUNDED and SQUARED Variation Swatches Shape.   
+* Option to Globally Select ROUNDED or SQUARED Attribute Variation Swatches Shape.
+  [Round Swatches Demo](http://bit.ly/round-swatches-demo-readme) | [Square Swatches Demo](http://bit.ly/square-swatches-demo-readme) | [Documentation](http://bit.ly/round-square-doc-from-readme) | [Video Tutorial](http://bit.ly/round-square-youtube-video-from-readme) 
+<hr />
+* Blur Or Hide Or Show Cross Sign For Out of Stock Variation Swatches (Up To 40 Variations)
+  [Live Demo](http://bit.ly/blur-cross-hide-readme-demo) | [Documentation](http://bit.ly/blur-hide-readme-doc) | [Video Tutorial](http://bit.ly/blur-hide-youtube-readme) 
+<hr />
+* Product Page Swatches Size Control
+ [Live Preview](http://bit.ly/swatches-sizes) 
+<hr />
+
+* Reorder Product Attribute Variation Swatches
 * Flexible Swatches Tooltip Insert and Display settings   
 * Work on Variable Product Quick View Popup   
 * Compatible with popular WooCommerce themes and plugins 
@@ -61,39 +71,142 @@ In the free WooCommerce attribute variation plugin, besides creating size, brand
 * Convert attribute variations into radio button
 [Live Demo](http://bit.ly/radio-readme-demo) | [Documentation](http://bit.ly/radio-readme-doc) | [Video Tutorial](http://bit.ly/readme-radio-video)
 <hr />
-* Individual Product Basis Swatches Customization
+* Individual Product Basis Attribute Variation Swatches Customization
+[Live Demo](http://bit.ly/product-basis-demo-readme) | [Documentation](http://bit.ly/product-basis-doc-link-from-readme) | [Video Tutorial](http://bit.ly/product-basis-youtube-video-link-from-readme)
+<hr />
+* Show Image, Color, Button Variation Swatches in Same Attribute
+[Live Demo](http://bit.ly/product-basis-demo-readme) | [Documentation](http://bit.ly/product-basis-doc-link-from-readme) | [Video Tutorial](http://bit.ly/product-basis-youtube-video-link-from-readme)
+<hr />
 * Convert Manually Created Attibute Variations Into Color, Image, and Label Swatches
   [Video Tutorial](http://bit.ly/manual-attribute-readme-video)
 <hr />
 * Change Variation Product Gallery After Selecting Single Attribute Like Amazon Or AliExpress
-  [Live Demo](http://bit.ly/change-gallery-image-on-single-attribute-demo-readme) | [Documentation](hhttp://bit.ly/change-gallery-doc-readme) | [Video Tutorial](http://bit.ly/change-gallery-image-on-single-attribute-youtube-readme) 
+  [Live Demo](http://bit.ly/change-gallery-image-on-single-attribute-demo-readme) | [Documentation](hhttp://bit.ly/change-gallery-doc-readme) | [Video Tutorial](http://bit.ly/change-gallery-image-on-single-attribute-youtube-readme)
+<hr />
 * Generate Selected Attribute Variation Link 
   [Live Demo](http://bit.ly/link-generate-readme-demo) | [Documentation](http://bit.ly/generate-attribute-variation-link-doc-readme) | [Video Tutorial](http://bit.ly/link-generate-readme-youtube)
+<hr />
+* Option to Select ROUNDED and SQUARED Attribute Variation Swatches Shape In the Same Product.
+  [Round & Square Swatches Demo](http://bit.ly/round-square-demo-readme) | [Documentation](http://bit.ly/round-square-doc-from-readme) | [Video Tutorial](http://bit.ly/round-square-youtube-video-from-readme)
+<hr />
+* Blur Or Hide Or Show Cross Sign For Out of Stock Variation Swatches (Unlimited Variations Without hiding out of stock item from catalog)
+  [Live Demo](http://bit.ly/bulr-premium-outstock-demo-readme) | [Documentation](http://bit.ly/special-attribute-doc-readme) | [Video Tutorial](http://bit.ly/blur-hide-youtube-readme) 
+<hr />
+* Shop Page Swatches Size Control
+ [Live Preview](http://bit.ly/shop-swatches-size-readme) 
+<hr />
+* Make Selected Attribute Variation Swatches Size Larger Than Other Default Attribute Variations
+ [Live Preview](http://bit.ly/special-attribute-readme-demo) | [Documentation](http://bit.ly/special-attribute-doc-readme) |  [Video Tutorial](http://bit.ly/special-attribute-youtube-readme) 
+<hr />
+* Show Custom Text in Variation Tooltip
+ [Live Preview](http://bit.ly/custom-tooltip-text-readme)
+<hr />
+* Show Custom Image in Variation Tooltip
+ [Live Preview](http://bit.ly/image-tooltip-readme) |  [Video Tutorial](http://bit.ly/tooltip-tip-image-youtube-readme) 
+<hr />
 * Enable / Disable Ajax Variation
-* Control Swatches Width and Height on Archive Page.
 * Archive page swatches positioning
 * Archive page swatches alignment
 * Tooltip display setting on archive/shop page
 * Variation clear button display setting.
 * Customize Tooltip Text and Background Color
-* Customize font size, swatches height and width
 * Customize swatches colors, background and border sizes
 * Automatic updates and exclusive technical support
 
 = Sites Built With WooCommerce Variation Swatches Plugin =
 <blockquote>
+
+
+<blockquote>
 <ul>
-<li><a target="_blank" href="http://bit.ly/wvs-flatsome-01">muliomulio.com</a> | Built With: Flatsome Theme | Niche: Leather Bag Store </li>
-<li><a target="_blank" href="http://bit.ly/twentey-seventeen-demo">vollstedt-b2b.com</a> | Built With: Twenty Seventen Theme | Niche: Leather Wallets Store </li>
-<li><a target="_blank" href="http://bit.ly/wvg-demo-kelium">qnoop.com</a> | Built With: Kalium Theme | Niche: Clothing Store </li>
-<li><a target="_blank" href="http://bit.ly/wvs-client-demo-01">designchess.com</a> | Built With: Flatsome Theme | Niche: Chess Design Store </li>
-<li><a target="_blank" href="http://bit.ly/woovs-demo-flatsome-02">makromass.pl</a> | Built With: Flatsome Theme | Niche: Supplements for athletes</li>
-<li><a target="_blank" href="http://bit.ly/wvs-demo-client-2">delampjesfabriek.nl</a> | Built With: Flatsome Theme | Niche: Supplements for athletes</li>
-<li><a target="_blank" href="http://bit.ly/woovs-demo-avada-01">luckyonebijoux.com</a> | Built With: Avada Theme | Niche: Jewelry Shop </li>
-<li><a target="_blank" href="http://bit.ly/woovs-avada-02">polymaker.metricdesign.net</a> | Built With: Avada Theme | Niche: 3d Parts Shop </li>
-<li><a target="_blank" href="http://bit.ly/woovs-demo-nitro">sethsoldtimes.com</a> | Built With: Nitro Theme | Niche: Dise Golf Store</li>
-<li><a target="_blank" href="http://bit.ly/woovs-demo-01">plotnikoff.ru</a> Built With: Uncode Theme | Niche: Furniture and Home Appliances Store </li>
-<li><a target="_blank" href="http://bit.ly/woovs-demo-03">robinsongarden.co.uk</a> Built With: Labomba Theme | Niche: Bespoke Furniture Store</li>
+<li> Built With: Flatsome WooCommerce Theme
+   <ul style="list-style: none;">
+   	<li><a target="_blank" href="http://bit.ly/wvs-flatsome-01">muliomulio.com | Niche: Leather Bag Store </a>  </li>
+   	<li><a target="_blank" href="http://bit.ly/wvs-client-demo-01">designchess.com  | Niche: Chess Design Store </a></li>
+	<li><a target="_blank" href="http://bit.ly/woovs-demo-flatsome-02">makromass.pl| Niche: Supplements for athletes </a></li>
+	<li><a target="_blank" href="http://bit.ly/wvs-demo-client-2">delampjesfabriek.nl  | Niche: Supplements for athletes </a></li>
+	<li><a target="_blank" href="http://bit.ly/flatsome-wvs-demo-04">bell-motorcycle-helmets.co.uk | Niche: Motorcycle Helmets </a></li>
+   </ul>
+</li>
+
+<li> Built With: Avada WooCommerce Multi-Purpose Theme
+   <ul>
+   	<li><a target="_blank" href="http://bit.ly/woovs-demo-avada-01">luckyonebijoux.com | Niche: Jewelry Shop </a></li>
+	<li><a target="_blank" href="http://bit.ly/woovs-avada-02">polymaker.metricdesign.net | Niche: 3d Parts Shop </a></li>   	
+   </ul>
+</li>
+
+<li> Built With: Divi by Elegant Themes
+   <ul>
+   	<li><a target="_blank" href="http://bit.ly/wvs-divi-demo-01">embodywear.com | Niche: Bodywear Shop </a></li>
+   	<li><a target="_blank" href="http://bit.ly/divi-wvs-demo-01">clasp.apsbay.com | Niche: Handbags Shop </a></li>
+   </ul>
+</li>
+
+<li> Built With: Enfold - WooCommerce Multi-Purpose Theme
+   <ul>
+   		<li><a target="_blank" href="http://bit.ly/wvs-enfold-demo">drawnfresh.co.uk | Niche: T-Shirt Store </a> </li>
+   </ul>
+</li>
+
+<li> Built With: Astra WooCommerce Theme
+   <ul>
+   		<li><a target="_blank" href="http://bit.ly/astra-wvs-demo">polelegendaerial.at | Niche: Shoe Store </a> </li>
+   </ul>
+</li>
+
+<li> Built With: Salient WooCommerce Theme
+   <ul>
+   		<li><a target="_blank" href="http://bit.ly/salient-wvs-demo">chooseoneshop.com | Niche: T-Shirt Store </a> </li>
+   </ul>
+</li>
+
+<li> Built With: Twenty Seventen Theme
+   <ul>
+   		<li><a target="_blank" href="http://bit.ly/twentey-seventeen-demo">vollstedt-b2b.com | Niche: Leather Wallets Store </a></li>
+
+   </ul>
+</li>
+
+<li> Built With: TheGem WooCommerce Theme
+   <ul>
+   		<li><a target="_blank" href="http://bit.ly/thegem-wvs-demo">sarrowork.com.br | Niche: Jacket Clothing Store </a></li>
+
+   </ul>
+</li>
+
+<li> Built With: Kalium WooCommerce Professionals Theme
+   <ul>
+   		<li><a target="_blank" href="http://bit.ly/wvg-demo-kelium">qnoop.com | Niche: Clothing Store </a></li>
+   </ul>
+</li>
+
+<li> Built With: Jevelin WooCommerce Theme
+   <ul>
+   		<li><a target="_blank" href="http://bit.ly/jevelin-wvs-demo">falkgarn.se | Niche: Cotton & Spinning Store </a></li>
+   </ul>
+</li>
+
+
+<li> Built With: Nitro WooCommerce Theme
+   <ul>
+   		<li><a target="_blank" href="http://bit.ly/woovs-demo-nitro">sethsoldtimes.com | Niche: Dise Golf Store </a></li>
+   </ul>
+</li>
+
+
+<li> Built With: Domino WooCommerce Theme
+   <ul>
+   		<li><a target="_blank" href="http://bit.ly/domino-theme-demo">abso.com.ar | Niche: Clothing Store </a></li>
+   </ul>
+</li>
+
+<li> Built With: KuteShop WooCommerce Theme
+   <ul>
+   		<li><a target="_blank" href="http://bit.ly/kuteshop-vws-demo">torbice.s | Niche: Bag and Baggage Store </a></li>
+   </ul>
+</li>
+
 </ul>
 </blockquote>
 
@@ -211,6 +324,10 @@ And your are ready to go.
 12. Global Variation Color Swatches Attribute List Preview
 
 == Changelog ==
+
+= 1.0.43 =
+
+* Fix: Uncode theme Issue
 
 = 1.0.42 =
 

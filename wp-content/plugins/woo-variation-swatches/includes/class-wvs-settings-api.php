@@ -262,6 +262,18 @@
 				}
 			}
 			
+			public function make_implode_html_attributes( $raw_attributes, $except = array( 'type', 'id', 'name', 'value' ) ) {
+				$attributes = array();
+				foreach ( $raw_attributes as $name => $value ) {
+					if ( in_array( $name, $except ) ) {
+						continue;
+					}
+					$attributes[] = esc_attr( $name ) . '="' . esc_attr( $value ) . '"';
+				}
+				
+				return implode( ' ', $attributes );
+			}
+			
 			public function field_callback( $field ) {
 				
 				switch ( $field[ 'type' ] ) {
@@ -304,22 +316,29 @@
 			public function checkbox_field_callback( $args ) {
 				
 				$value = (bool) $this->get_option( $args[ 'id' ] );
-				$size  = isset( $args[ 'size' ] ) && ! is_null( $args[ 'size' ] ) ? $args[ 'size' ] : 'regular';
-				$html  = sprintf( '<fieldset><label><input type="checkbox" id="%2$s-field" name="%4$s[%2$s]" value="%3$s" %5$s/> %6$s</label></fieldset>', $size, $args[ 'id' ], true, $this->settings_name, checked( $value, true, false ), esc_attr( $args[ 'desc' ] ) );
+				// $size  = isset( $args[ 'size' ] ) && ! is_null( $args[ 'size' ] ) ? $args[ 'size' ] : 'regular';
+				
+				$attrs = isset( $args[ 'attrs' ] ) ? $this->make_implode_html_attributes( $args[ 'attrs' ] ) : '';
+				
+				$html = sprintf( '<fieldset><label><input %1$s type="checkbox" id="%2$s-field" name="%4$s[%2$s]" value="%3$s" %5$s/> %6$s</label></fieldset>', $attrs, $args[ 'id' ], true, $this->settings_name, checked( $value, true, false ), esc_attr( $args[ 'desc' ] ) );
 				
 				echo $html;
 			}
 			
 			public function radio_field_callback( $args ) {
-				$size    = isset( $args[ 'size' ] ) && ! is_null( $args[ 'size' ] ) ? $args[ 'size' ] : 'regular';
+				// $size    = isset( $args[ 'size' ] ) && ! is_null( $args[ 'size' ] ) ? $args[ 'size' ] : 'regular';
 				$options = apply_filters( "wvs_settings_{$args[ 'id' ]}_radio_options", $args[ 'options' ] );
 				$value   = esc_attr( $this->get_option( $args[ 'id' ] ) );
-				$html    = '<fieldset>';
-				$html    .= implode( '<br />', array_map( function ( $key, $option ) use ( $size, $args, $value ) {
-					return sprintf( '<label><input type="radio" id="%2$s-field" name="%4$s[%2$s]" value="%3$s" %5$s/> %6$s</label>', $size, $args[ 'id' ], $key, $this->settings_name, checked( $value, $key, false ), $option );
+				
+				$attrs = isset( $args[ 'attrs' ] ) ? $this->make_implode_html_attributes( $args[ 'attrs' ] ) : '';
+				
+				
+				$html = '<fieldset>';
+				$html .= implode( '<br />', array_map( function ( $key, $option ) use ( $attrs, $args, $value ) {
+					return sprintf( '<label><input %1$s type="radio" id="%2$s-field" name="%4$s[%2$s]" value="%3$s" %5$s/> %6$s</label>', $attrs, $args[ 'id' ], $key, $this->settings_name, checked( $value, $key, false ), $option );
 				}, array_keys( $options ), $options ) );
-				$html    .= $this->get_field_description( $args );
-				$html    .= '</fieldset>';
+				$html .= $this->get_field_description( $args );
+				$html .= '</fieldset>';
 				
 				echo $html;
 			}
@@ -331,8 +350,11 @@
 					return "<option value='{$key}'" . selected( $key, $value, false ) . ">{$option}</option>";
 				}, array_keys( $options ), $options );
 				$size    = isset( $args[ 'size' ] ) && ! is_null( $args[ 'size' ] ) ? $args[ 'size' ] : 'regular';
-				$html    = sprintf( '<select class="%1$s-text" id="%2$s-field" name="%4$s[%2$s]">%3$s</select>', $size, $args[ 'id' ], implode( '', $options ), $this->settings_name );
-				$html    .= $this->get_field_description( $args );
+				
+				$attrs = isset( $args[ 'attrs' ] ) ? $this->make_implode_html_attributes( $args[ 'attrs' ] ) : '';
+				
+				$html = sprintf( '<select %5$s class="%1$s-text" id="%2$s-field" name="%4$s[%2$s]">%3$s</select>', $size, $args[ 'id' ], implode( '', $options ), $this->settings_name, $attrs );
+				$html .= $this->get_field_description( $args );
 				
 				echo $html;
 			}
@@ -366,8 +388,11 @@
 			public function text_field_callback( $args ) {
 				$value = esc_attr( $this->get_option( $args[ 'id' ] ) );
 				$size  = isset( $args[ 'size' ] ) && ! is_null( $args[ 'size' ] ) ? $args[ 'size' ] : 'regular';
-				$html  = sprintf( '<input type="text" class="%1$s-text" id="%2$s-field" name="%4$s[%2$s]" value="%3$s"/>', $size, $args[ 'id' ], $value, $this->settings_name );
-				$html  .= $this->get_field_description( $args );
+				
+				$attrs = isset( $args[ 'attrs' ] ) ? $this->make_implode_html_attributes( $args[ 'attrs' ] ) : '';
+				
+				$html = sprintf( '<input %5$s type="text" class="%1$s-text" id="%2$s-field" name="%4$s[%2$s]" value="%3$s"/>', $size, $args[ 'id' ], $value, $this->settings_name, $attrs );
+				$html .= $this->get_field_description( $args );
 				
 				echo $html;
 			}
@@ -412,7 +437,10 @@
 				$step   = isset( $args[ 'step' ] ) && ! is_null( $args[ 'step' ] ) ? 'step="' . $args[ 'step' ] . '"' : '';
 				$suffix = isset( $args[ 'suffix' ] ) && ! is_null( $args[ 'suffix' ] ) ? ' <span>' . $args[ 'suffix' ] . '</span>' : '';
 				
-				$html = sprintf( '<input type="number" class="%1$s-text" id="%2$s-field" name="%4$s[%2$s]" value="%3$s" %5$s %6$s %7$s /> %8$s', $size, $args[ 'id' ], $value, $this->settings_name, $min, $max, $step, $suffix );
+				$attrs = isset( $args[ 'attrs' ] ) ? $this->make_implode_html_attributes( $args[ 'attrs' ] ) : '';
+				
+				
+				$html = sprintf( '<input %9$s type="number" class="%1$s-text" id="%2$s-field" name="%4$s[%2$s]" value="%3$s" %5$s %6$s %7$s /> %8$s', $size, $args[ 'id' ], $value, $this->settings_name, $min, $max, $step, $suffix, $attrs );
 				$html .= $this->get_field_description( $args );
 				
 				echo $html;

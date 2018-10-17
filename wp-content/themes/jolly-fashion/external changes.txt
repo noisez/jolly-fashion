@@ -2,3 +2,66 @@ storefront\inc\storefront-template-functions.php
 \wp-includes\js\jquery\ == jquery.js --> jquery_old.js  change for new jquery
 storefront\inc\woocommerce\class-storefront-woocommerce.php = class="col-full" --> class="container"
 \wp-content\plugins\woocommerce\includes = 'posts_per_page' => 2 --> 'posts_per_page' => 4 ; 'columns' => 2 --> 'columns' => 4
+
+\wp-content\themes\storefront\inc\woocommerce\storefront-woocommerce-template-functions.php
+
+function storefront_woocommerce_brands_single() {
+		$brand = storefront_do_shortcode( 'product_brand', array(
+			'class' => ''
+		) );
+
+		if ( empty( $brand ) ) {
+			return;
+		}
+
+		?>
+		<div class="storefront-wc-brands-single-product">
+			<?php echo wp_kses_post( $brand ); ?>
+		</div>
+		<?php
+	}
+
+if ( ! function_exists( 'storefront_sorting_wrapper' ) ) {
+	/**
+	 * Sorting wrapper
+	 *
+	 * @since   1.4.3
+	 * @return  void
+	 */
+	function storefront_sorting_wrapper() {
+        echo '<div class="filters row">';
+        echo '<div class="col-md-2">';
+		echo '<div class="storefront-sorting">';
+	}
+}
+
+if ( ! function_exists( 'storefront_sorting_wrapper_close' ) ) {
+	/**
+	 * Sorting wrapper close
+	 *
+	 * @since   1.4.3
+	 * @return  void
+	 */
+	function storefront_sorting_wrapper_close() {
+        echo '</div>';
+        echo '</div>';
+
+        echo '<div class="col-md-2">';
+        echo do_shortcode( '[widget id="woocommerce_product_categories-2"]' );
+        echo '</div>';
+
+        echo '<div class="col-md-2">';
+        echo do_shortcode( '[widget id="woocommerce_layered_nav-3"]' );
+        echo '</div>';
+
+        echo '<div class="col-md-2">';
+        echo do_shortcode( '[widget id="woocommerce_layered_nav-2"]' );
+        echo '</div>';
+
+        echo '<div class="col-md-4"><div class="price-filter">??????? ????????</div>';
+        echo do_shortcode( '[widget id="woocommerce_price_filter-2"]' );
+        echo '</div>';
+
+		echo '</div>';
+	}
+}

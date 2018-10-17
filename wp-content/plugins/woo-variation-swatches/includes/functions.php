@@ -1032,7 +1032,7 @@
 			$tabs[ 'woo-variation-swatches-pro' ] = array(
 				'label'    => esc_html__( 'Swatches Settings', 'woo-variation-swatches' ),
 				'target'   => 'wvs-pro-product-variable-swatches-options',
-				'class'    => array( 'show_if_variable', 'variations_tab' ),
+				'class'    => array( 'show_if_variable', 'variations_tab', 'pro-inactive' ),
 				'priority' => 65,
 			);
 			
@@ -1067,6 +1067,12 @@
                     .gwp-pro-button span {
                         padding-top : 10px;
                         }
+
+                    .gwp-pro-features-wrapper ul {
+                        display : block;
+                        float   : left;
+                        width   : 50%;
+                        }
                 </style>
                 <div class="gwp-pro-features-wrapper">
                     <h3>Upgrade to Woocommerce Variation Swatches - Pro</h3>
@@ -1089,6 +1095,15 @@
                         <li><span class="dashicons dashicons-yes"></span> Customize swatches colors, background and border sizes.</li>
                         <li><span class="dashicons dashicons-yes"></span> Automatic updates and exclusive technical support.</li>
                     </ul>
+                    <ul>
+                        <li>
+                            <h4>How To Customize Individual Product Attribute Variation Swatches</h4>
+                            <div class="gwp-pro-video-features-wrapper">
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/ILf1S2k97es?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
                     <a target="_blank" class="button button-primary button-hero gwp-pro-button" href="<?php echo esc_url( woo_variation_swatches()->get_pro_link( 'product-edit' ) ); ?>">Okay, I need the features! <span class="dashicons dashicons-external"></span></a>
                 </div>
             </div>

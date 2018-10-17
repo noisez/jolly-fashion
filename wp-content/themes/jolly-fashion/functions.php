@@ -120,3 +120,10 @@ function wc_ninja_remove_password_strength() {
     }
 }
 add_action( 'wp_print_scripts', 'wc_ninja_remove_password_strength', 100 );
+
+//Убираем p вокруг img в редакторе страницы
+function filter_ptags_on_images($content){
+//функция preg replace, которая убивает тег p
+    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+add_filter('the_content', 'filter_ptags_on_images');

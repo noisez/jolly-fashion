@@ -19,6 +19,9 @@ $( document ).ready(function() {
     }
 
 
+    $('.add_to_wishlist').attr('title', 'В избранное');
+
+
     $('.main-blog__slider_box').slick({
         prevArrow: $('.slblog_prev'),
         nextArrow: $('.slblog_next')
