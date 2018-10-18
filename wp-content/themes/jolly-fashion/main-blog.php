@@ -63,30 +63,3 @@
         <a href="#" class="main-blog__subscribe_button">Подписаться</a>
     </div>
 </section>
-
-<div class="contacts">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="contacts__info">
-                <p class="contacts__info_title">Контактная мнформация</p>
-                <p class="contacts__info_phone">(044) 374 03 83</p>
-                <p class="contacts__info_email">jolly_fashion@fmail.com</p>
-                <p class="contacts__info_address">г.Киев, ул. Архитектора 7</p>
-        </div>
-            <div class="contacts__feedback">
-                <form action="" class="contacts__feedback_form">
-                    <p class="contacts__feedback_title">Обратная связь</p>
-                    <input type="text" class="contacts__feedback_input" required placeholder="Имя" name="name">
-                    <input type="text" class="contacts__feedback_input" required placeholder="Email" name="email">
-                    <input type="text" class="contacts__feedback_input" required placeholder="Сообщение" name="message">
-                    <button type="submit" class="contacts__feedback_submit">Отправить</button>
-                </form>
-            </div>
-        </div>
-        <div class="col-md-8">
-            <div class="contacts__map">
-                <iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1795.9072139482287!2d30.452069412963255!3d50.46351706730797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdcd393af8a9%3A0x6abaab9bbbbf4ac4!2z0YPQuy4g0JTQtdCz0YLRj9GA0ZHQstGB0LrQsNGPLCA0OCwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1535637749070" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-            </div>
-        </div>
-    </div>
-</div>

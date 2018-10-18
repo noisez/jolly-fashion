@@ -1815,8 +1815,8 @@ if ( ! function_exists( 'woocommerce_related_products' ) ) {
 		}
 
 		$defaults = array(
-			'posts_per_page' => 4,
-			'columns'        => 4,
+			'posts_per_page' => 2,
+			'columns'        => 2,
 			'orderby'        => 'rand', // @codingStandardsIgnoreLine.
 			'order'          => 'desc',
 		);
