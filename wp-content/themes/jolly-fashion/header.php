@@ -87,7 +87,6 @@
 
 <div id="page" class="hfeed site">
 	<?php do_action( 'storefront_before_header' ); ?>
-
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
         <nav class="nav">
             <div class="container">
@@ -136,6 +135,9 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+                <div class="nav__categories">
+                    <?php echo do_shortcode('[widget id="woocommerce_product_categories-3"]'); ?>
                 </div>
             </div>
         </nav>

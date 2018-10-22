@@ -127,3 +127,36 @@ function filter_ptags_on_images($content){
     return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 add_filter('the_content', 'filter_ptags_on_images');
+
+//убираем количество в категориях
+add_filter('woocommerce_subcategory_count_html','remove_count');
+
+function remove_count(){
+    $html='';
+    return $html;
+}
+
+/* Изменить знак валюты */
+add_filter( 'woocommerce_currencies', 'add_my_currency' );
+
+function add_my_currency( $currencies ) {
+
+    $currencies['UAH'] = __( 'Українська гривня', 'woocommerce' );
+
+    return $currencies;
+
+}
+
+add_filter('woocommerce_currency_symbol', 'add_my_currency_symbol', 10, 2);
+
+function add_my_currency_symbol( $currency_symbol, $currency ) {
+
+    switch( $currency ) {
+
+        case 'UAH': $currency_symbol = 'грн'; break;
+
+    }
+
+    return $currency_symbol;
+
+}

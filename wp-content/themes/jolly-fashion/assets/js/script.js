@@ -1,5 +1,10 @@
 $( document ).ready(function() {
 
+    $('#menu-item-124').click (function (e) {
+        e.preventDefault();
+        $('.product-categories').toggleClass('show-list');
+    });
+
     var user = $('.account__name');
     if(user.html() != '') {
         $('.personal__account > a').attr('data-toggle', '');
